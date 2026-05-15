@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 12, "titleFontSize": 13}, "title": {"anchor": "start", "fontSize": 18}}, "data": {"name": "data-639749e04b4a85a3f3d62ffc9e6be8f8"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "fall", "title": "Record Type", "type": "nominal"}, "tooltip": [{"field": "decade", "title": "Decade", "type": "ordinal"}, {"field": "fall", "title": "Record Type", "type": "nominal"}, {"field": "records", "format": ",", "title": "Records", "type": "quantitative"}], "x": {"field": "decade", "title": "Decade", "type": "ordinal"}, "y": {"field": "records", "title": "Number of Meteorite Records", "type": "quantitative"}}, "height": 360, "title": "Meteorite Records Since 1900 Are Mostly Later Discoveries", "width": 760, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-639749e04b4a85a3f3d62ffc9e6be8f8": [{"decade": 1900, "fall": "Fell", "records": 55}, {"decade": 1900, "fall": "Found", "records": 81}, {"decade": 1910, "fall": "Fell", "records": 66}, {"decade": 1910, "fall": "Found", "records": 87}, {"decade": 1920, "fall": "Fell", "records": 69}, {"decade": 1920, "fall": "Found", "records": 89}, {"decade": 1930, "fall": "Fell", "records": 91}, {"decade": 1930, "fall": "Found", "records": 213}, {"decade": 1940, "fall": "Fell", "records": 58}, {"decade": 1940, "fall": "Found", "records": 134}, {"decade": 1950, "fall": "Fell", "records": 60}, {"decade": 1950, "fall": "Found", "records": 148}, {"decade": 1960, "fall": "Fell", "records": 59}, {"decade": 1960, "fall": "Found", "records": 326}, {"decade": 1970, "fall": "Fell", "records": 58}, {"decade": 1970, "fall": "Found", "records": 4904}, {"decade": 1980, "fall": "Fell", "records": 56}, {"decade": 1980, "fall": "Found", "records": 6750}, {"decade": 1990, "fall": "Fell", "records": 54}, {"decade": 1990, "fall": "Found", "records": 10720}, {"decade": 2000, "fall": "Fell", "records": 59}, {"decade": 2000, "fall": "Found", "records": 11398}, {"decade": 2010, "fall": "Fell", "records": 13}, {"decade": 2010, "fall": "Found", "records": 1950}, {"decade": 2100, "fall": "Found", "records": 1}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
