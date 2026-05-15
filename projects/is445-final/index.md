@@ -15,11 +15,13 @@ The page includes exploratory visualizations, one main interactive visualization
 
 ## Data Sources and Analysis Notebook
 
+## Data Sources and Analysis Notebook
+
 - [NASA Meteorite Landings](https://data.nasa.gov/dataset/meteorite-landings)  
   Primary dataset for recorded meteorites, including location, year, mass, meteorite class, and record type.
 
-- [NASA Fireball and Bolide Reports](https://data.nasa.gov/dataset/fireball-and-bolide-reports)  
-  Contextual dataset for bright atmospheric fireball events.
+- [NASA/CNEOS Fireball and Bolide Reports](https://cneos.jpl.nasa.gov/fireballs/)  
+  Contextual dataset for bright atmospheric fireball events. The notebook uses a local CSV copy of this dataset.
 
 - [Natural Earth map boundary data](https://www.naturalearthdata.com/)  
   Geographic boundary data used for world map outlines and country/region aggregation.
