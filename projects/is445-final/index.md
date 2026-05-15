@@ -15,8 +15,6 @@ The page includes exploratory visualizations, one main interactive visualization
 
 ## Data Sources and Analysis Notebook
 
-## Data Sources and Analysis Notebook
-
 - [NASA Meteorite Landings](https://data.nasa.gov/dataset/meteorite-landings)  
   Primary dataset for recorded meteorites, including location, year, mass, meteorite class, and record type.
 
