@@ -1,0 +1,19 @@
+.wrapper {
+  max-width: 1200px !important;
+}
+
+.page-content {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+iframe {
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
